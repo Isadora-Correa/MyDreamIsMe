@@ -1,0 +1,517 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Archivo"
+}
+
+::selection {
+    background-color: #5B99C2;
+    color: #EEEEEE
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0
+}
+
+button,
+input {
+    border: 0;
+    font-family: "Archivo"
+}
+
+button:focus,
+input:focus {
+    border: 0
+}
+
+body {
+    font-family: "Archivo";
+    background-color: #EEEEEE;
+    overflow-x: hidden
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%
+}
+
+::-webkit-scrollbar {
+    width: 8px
+}
+
+::-webkit-scrollbar-track {
+    background-color: #111
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5B99C2;
+    border-radius: 8px
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Archivo";
+}
+
+::selection {
+    background-color: #5B99C2;
+    color: #EEEEEE;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+button,
+input {
+    border: 0;
+    font-family: "Archivo";
+}
+
+button:focus,
+input:focus {
+    border: 0;
+}
+
+body {
+    font-family: "Archivo";
+    background-color: #EEEEEE;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+/*SEÇÃO NAVBAR*/
+
+header {
+    padding: 0px 50px;
+    background: #111;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid #101013;
+    z-index: 999;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header .grid-layout nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100px;
+    padding: 0px 8px;
+}
+
+header .grid-layout nav img {
+    width: 150px;
+}
+
+header .grid-layout nav .nav-list {
+    list-style: none;
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: none;
+}
+
+header .grid-layout nav .nav-list li {
+    margin-left: 48px;
+}
+
+header .grid-layout nav .nav-list li a {
+    color: #EEEEEE;
+    position: relative;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+header .grid-layout nav .nav-list li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -7px;
+    left: 0;
+    background: linear-gradient(270deg, #5B99C2 0%, #17161d 100%);
+    transform-origin: bottom right;
+    transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+header .grid-layout nav .nav-list li a:hover {
+    color: #5B99C2;
+}
+
+header .grid-layout nav .nav-list li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* NAVBAR MOBILE */
+
+@media screen and (max-width: 992px) {
+    header {
+        padding: 0px 24px;
+    }
+}
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 1px;
+    background-color: #EEEEEE;
+    margin: 8px;
+    transition: .4s;
+}
+
+.nav-list.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+
+/* SEÇÃO P-TECHS */
+#s-p-techs {
+    padding: 96px 48px;
+    background-color: #111;
+    text-align: center;
+    color: #EEEEEE;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 992px) {
+    #s-p-techs {
+        padding: 48px 24px;
+    }
+}
+
+.grid-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#s-p-techs h2 {
+    padding-bottom: 24px;
+    color: #EEEEEE;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+#s-p-techs h2 span {
+    color: #5B99C2;
+}
+
+#s-p-techs .materias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    #s-p-techs .materias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #s-p-techs .materias {
+        grid-template-columns: 1fr;
+    }
+}
+
+#s-p-techs .tech-item {
+    background-color: #151515;
+    border: 1px solid #1f1f1f;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s, transform 0.8s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    min-height: 200px;
+    flex: 1;
+}
+
+#s-p-techs .tech-item a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+#s-p-techs .tech-item:hover {
+    border-color: #5B99C2;
+    transform: scale(1.08);
+}
+
+#s-p-techs .tech-item h3 {
+    font-size: 2rem;
+    color: #EEEEEE;
+    margin: 8px 0;
+}
+
+#s-p-techs .tech-item .blog-descricao {
+    color: #5B99C2;
+}
+
+#s-p-techs .tech-item p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.tech-detail {
+    margin-top: 16px;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.tech-detail.active {
+    max-height: 500px;
+    opacity: 1;
+}
+
+
+.tech-detail img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.tech-detail .tech-content {
+    text-align: left;
+    max-width: 600px;
+}
+
+.tech-detail .tech-content h3 {
+    font-size: 1.8rem;
+    color: #5B99C2;
+    margin-bottom: 8px;
+}
+
+.tech-detail .tech-content p {
+    font-size: 1.4rem;
+    margin: 8px 0;
+}
+
+.tech-detail .tech-content .short-text {
+    color: #EEEEEE;
+    text-align: justify;
+}
+
+.tech-detail .date {
+    font-size: 1.2rem;
+    color: #5B99C2;
+    font-weight: bold;
+}
+
+.tech-item.expanded {
+    background-color: #1b1b1b;
+    transition: background-color 0.3s ease;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #151515;
+    color: #EEEEEE;
+    padding: 24px 0px
+}
+
+footer .grid-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%
+}
+
+footer p {
+    font-size: 1.8rem
+}
+
+footer p a {
+    font-weight: 500;
+    color: #5B99C2
+}
+
+footer img {
+    width: 32px
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+    gap: 16px
+}
+
+@media screen and (max-width: 1200px) {
+    footer .grid-layout {
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 48px
+    }
+
+    footer .grid-layout div {
+        display: none
+    }
+}
+
+.typewriter:after {
+    content: "|";
+    margin-left: 8px;
+    opacity: 1;
+    animation: blink 1s infinite;
+    color: #5B99C2
+}
+
+@keyframes blink {
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+.grid-layout {
+    max-width: 1140px;
+    margin: 0 auto
+}
+
+.delaySmallReveal{
+    margin-top: 50px;
+}
+
+/* Remover duplicatas */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Archivo";
+}
+
+/* Ajustar visibilidade e opacidade no menu para telas pequenas */
+.nav-list {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.nav-list.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Melhorar transição do tech-item */
+.tech-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+.tech-detail.active {
+    max-height: 500px; /* Ajuste de acordo com o conteúdo */
+    opacity: 1;
+}
+
+/* Responsividade melhorada */
+@media screen and (max-width: 768px) {
+    #s-p-techs .materias {
+        grid-template-columns: 1fr;
+    }
+}
+
